@@ -1,0 +1,51 @@
+.brandname
+{
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar{
+    background-color: #212121;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #212121;
+    z-index: 1000;
+}
+
+.brandname
+{
+    color: white;
+}
+
+::ng-deep .nav-List  
+{
+    margin-left: 20px;
+    display: flex ;
+    justify-content: space-between;
+}
+
+::ng-deep .nav-items
+{
+    display: flex !important;
+    column-gap: 10px !important;
+}
+
+.nav-item a
+{
+    font-size: 15px;
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        border-color: white !important;
+    }
+    .navbar-toggler-icon {
+        filter: invert(1); /* Makes the toggle icon white */
+    }
+}
