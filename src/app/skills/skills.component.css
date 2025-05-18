@@ -1,0 +1,81 @@
+.skillMainCntainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #212121;
+}
+
+.HeadSection
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+#skillHeading{
+    color: #7f15fd;
+    font-size: 80px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#subHeading
+{
+    color: #e0d8e9;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.cardContainer {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 80px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1 1 200px;
+    max-width: 500px;
+    min-width: 300px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #7f15fd;
+    border: #212121 solid 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    #skillHeading {
+        font-size: 40px;
+    }
+
+    #subHeading {
+        font-size: 12px;
+    }
+
+    .card {
+        height: 150px;
+    }
+}

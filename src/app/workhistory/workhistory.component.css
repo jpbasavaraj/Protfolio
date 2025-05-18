@@ -1,0 +1,124 @@
+.workHistoryMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212121;
+    color: white;
+    padding: 50px 20px;
+}
+
+.timline-section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.timeline-items {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 2.5px);
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: 50%;
+    transform: translateX(10%);
+    text-align: left;
+}
+
+.timeline-dot {
+    height: 20px;
+    width: 20px;
+    background-color: #ef34d9;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 10px);
+    z-index: 1;
+}
+
+/* Base style */
+.timeline-item:nth-child(odd) .timeline-Date {
+    align-self: flex-end;
+    margin-right: 55%;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-Date {
+    align-self: flex-start;
+    margin-left: 55%;
+    text-align: left;
+}
+
+.timeline-Date {
+    font-weight: bold;
+    font-size: 14px;
+    color: #ef34d9;
+    background-color: #212121;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    width: fit-content;
+    z-index: 2;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background-color: rgba(45, 45, 45, 0.4); /* Transparent */
+    border-radius: 8px;
+    border: 1px solid #ef34d9;
+    z-index: 1;
+    backdrop-filter: blur(4px); /* optional glass effect */
+    transition: all 0.3s ease-in-out;
+    transition: transform 0.4s ease, 
+                box-shadow 0.4s ease, 
+                background-color 0.4s ease, 
+                border-color 0.4s ease;
+}
+
+/* Hover effect */
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ef34d9, 0 0 40px rgba(239, 52, 217, 0.5);
+    background-color: rgba(239, 52, 217, 0.1);
+    border-color: #ffffff;
+}
+
+.timeline-content h1 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #cccccc;
+}
